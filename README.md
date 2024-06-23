@@ -9,7 +9,7 @@
 - [SQL Employee Tracker](#sql-employee-tracker)
   - [Description \*\*\*](#description-)
   - [Table of Contents](#table-of-contents)
-  - [User Stor](#user-stor)
+  - [User Story](#user-story)
   - [Acceptance Criteria](#acceptance-criteria)
   - [Technologies Used \*\*\*](#technologies-used-)
   - [Features \*\*\*](#features-)
@@ -23,7 +23,7 @@
   - [Questions](#questions)
 
 
-## User Stor
+## User Story
 ```md
 AS A business owner
 I WANT to be able to view and manage the departments, roles, and employees in my company
@@ -91,11 +91,11 @@ To use the SQL Employee Tracker, follow the following steps:
 The following screenshots demonstrate the application's functionality and appearance:
 
 Prompts made to the user via the inquirer command line interface:
-![Shows screenshot of the prompts made to the user via the inquirer command line interface.](assets/images/user-input-screenshot.png)
+![Shows screenshot of the prompts made to the user via the inquirer command line interface.](assets/images/user-input-screenshot1.png)
 
-Landing page with link to Notes page: ***
-![Shows screenshot of the landing page with a clickable link to the notes page.](assets/images/landing-page-screenshot.png)
+![Shows screenshot of the prompts made to the user via the inquirer command line interface.](assets/images/user-input-screenshot2.png)
 
+![Shows screenshot of the prompts made to the user via the inquirer command line interface.](assets/images/user-input-screenshot3.png)
 
 ## Tests
 There is no unit testing written for this application.
@@ -109,6 +109,11 @@ Walkthrough Video Link: ***
 
 ## Credits ***
 Used the following starter code and sources as tutorials and guidelines: ***
+
+PostgreSQL Shell Documentation: https://www.postgresql.org/docs/current/app-psql.html
+
+Node.js `pg` Package: https://www.npmjs.com/package/pg
+
 
 Also utilized the Xpert Learning Assistant for some portions of my code:
 https://bootcampspot.instructure.com/courses/5293/external_tools/313

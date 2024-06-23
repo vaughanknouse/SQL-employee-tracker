@@ -62,16 +62,17 @@ THEN I am prompted to select an employee to update and their new role and this i
 
 ## Installation ***
 To install the SQL Employee Tracker, follow the following steps:
-
-***EDIT HERE***
 1.	Clone the repository to your local machine: `git clone https://github.com/vaughanknouse/SQL-employee-tracker.git`.
 2.	Ensure that the current version of Node.js is installed. 
 3.	Open the cloned repository in a CLI, such as Visual Studio Code.
 4.	Navigate to the project directory in your terminal. 
 5.	Initialize a project with `package.json` by typing `npm init -y` in the terminal.
-6. Install `inquirer` version 8.2.4 by typing `npm inquirer@8.2.4` in the terminal.
-7. Install other necessary dependencies by typing `npm i` in the command line to ensure that the `node-modules` folder is operating on your local device. 
-8. To run the server, within the terminal, type the command `npm start` or `node server.js`.
+6. Install `inquirer` version 8.2.4 by typing `npm i inquirer@8.2.4` in the terminal.
+7. Install the `pg` package by typing `npm install pg` in the terminal.
+8. Install other necessary dependencies by typing `npm i` in the command line to ensure that the `node-modules` folder is operating on your local device. 
+
+***EDIT HERE***
+1. To run the server, within the terminal, type the command `npm start` or `node server.js`.
 
 
 ## Usage ***

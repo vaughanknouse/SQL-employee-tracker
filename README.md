@@ -2,17 +2,25 @@
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
-## Description ***
+## Description
+Managing employee data effectively is crucial for any organization’s operational success. To simplify this process, this week’s UT Austin Coding Boot Camp challenge involved building an employee tracker command-line application from scratch using Node.js, Inquirer, and PostgreSQL. This application allows users, most notably business managers, to manage a company’s employee database more easily and efficiently, which helps with business organization and planning.
+
+As a powerful command-line application, the SQL Employee Tracker streamlines the efficient management of a company’s employee database using Node.js, Inquirer, and PostgreSQL. This application offers functionalities to view, add, update, and delete departments, roles, and employees, as well as to perform additional operations such as viewing employees by manager or department and calculating departmental budgets. Additionally, this application simplifies the process of adding new entries or updating employees’ roles through intuitive prompts powered by Inquirer. By combining Node.js for runtime execution, Inquirer for user interaction, and PostgreSQL for database connectivity and data storage, the SQL Employee Tracker application offers intuitive commands and structured views to handle the complexities of employee management seamlessly.
+
+The motivation behind building the SQL Employee Tracker application stemmed from the need to enhance organizational efficiency and streamline administrative tasks related to workforce management. Traditional methods of managing employee data often involve manual updates and disparate systems, leading to inefficiencies and potential errors. This application seeks to automate and centralize these processes, enabling users to focus more on strategic decision making rather than mundane administrative tasks.
+
+Offering a comprehensive suite of functionalities, the SQL Employee Tracker empowers users, especially business owners and administrators, to efficiently organize, update, and retrieve critical information about departments, roles, and employees within their organization. Overall, this application combines reliability with scalability, catering to businesses of various sizes and organizational structures. By leveraging the strengths of Node.js, Inquirer, and PostgreSQL, this application provides a functional and user-friendly employee management system which simplifies database management while empowering businesses to streamline their operations and make informed decisions.
+
 
 
 ## Table of Contents
 - [SQL Employee Tracker](#sql-employee-tracker)
-  - [Description \*\*\*](#description-)
+  - [Description](#description)
   - [Table of Contents](#table-of-contents)
   - [User Story](#user-story)
   - [Acceptance Criteria](#acceptance-criteria)
   - [Technologies Used \*\*\*](#technologies-used-)
-  - [Features \*\*\*](#features-)
+  - [Features](#features)
   - [Installation \*\*\*](#installation-)
   - [Usage \*\*\*](#usage-)
     - [Screenshots: \*\*\*](#screenshots-)
@@ -57,7 +65,14 @@ THEN I am prompted to select an employee to update and their new role and this i
 -	PostgreSQL
 
 
-## Features ***
+## Features
+- **Comprehensive Views**: Provides detailed and structured views of departments, roles, and employees in a tabular format.
+- **Efficient Data Entry**: Allows for easy addition of new departments, roles, and employees with guided prompts.
+- **Role and Manager Updates**: Enables seamless updates of employee roles and managers to reflect organizational changes.
+- **Data Filtering**: Facilitates filtering of employee data by department or manager, aiding in focused analysis and reporting.
+- **Budget Calculation**: Computes the total salary budget for selected departments, aiding in financial planning.
+- **Data Deletion**: Supports deletion of departments, roles, and employees, ensuring database maintenance and cleanup.
+- **User-Friendly Interface**: Offers an intuitive command-line interface (CLI) powered by Inquirer.js for effortless interaction.
 
 
 ## Installation ***

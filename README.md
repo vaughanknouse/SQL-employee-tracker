@@ -22,7 +22,7 @@ Offering a comprehensive suite of functionalities, the SQL Employee Tracker empo
   - [Features](#features)
   - [Installation](#installation)
   - [Usage](#usage)
-    - [Screenshots: \*\*\*](#screenshots-)
+    - [Screenshots:](#screenshots)
   - [Tests](#tests)
   - [Links \*\*\*](#links-)
   - [Credits](#credits)
@@ -94,11 +94,13 @@ To use the SQL Employee Tracker, follow the following steps:
 7.	Select your desired action from the command line prompts using the ‘UP’ and ‘DOWN’ arrow keys on your keyboard in order to update the company’s employee database.
 
 
-### Screenshots: ***
+### Screenshots:
 The following screenshot demonstrates the application's functionality and appearance:
 
-The application being run in the command line showing user input prompts: 
+**Image of the application being run in the command line showing user input prompts:**
+
 ![Shows application being run in the command line showing user input prompts.](assets/images/user-input-screenshot.png)
+
 
 ## Tests
 There is no unit testing written for this application.

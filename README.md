@@ -93,7 +93,7 @@ To use the SQL Employee Tracker, follow the following steps:
 3.	Enter your user database password.
 4.	Create the `company_db` database by typing the command `\i db/schema.sql` in the terminal.
 5.	Seed the `company_db` database with some employee information by typing the command `\i db/seeds.sql` in the terminal.
-6.	Once your PostgreSQL database is active, navigate to the project directory and run the application by typing `npm start` in the terminal.
+6.	Once your PostgreSQL database is active, navigate to the project directory and run the application by typing `node index.js` in the terminal.
 7.	Select your desired action from the command line prompts using the ‘UP’ and ‘DOWN’ arrow keys on your keyboard in order to update the company’s employee database.
 
 

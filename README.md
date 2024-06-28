@@ -25,7 +25,7 @@ Offering a comprehensive suite of functionalities, the SQL Employee Tracker empo
     - [Screenshots: \*\*\*](#screenshots-)
   - [Tests](#tests)
   - [Links \*\*\*](#links-)
-  - [Credits \*\*\*](#credits-)
+  - [Credits](#credits)
   - [License](#license)
   - [Questions](#questions)
 
@@ -67,10 +67,7 @@ THEN I am prompted to select an employee to update and their new role and this i
 ## Features
 - **Comprehensive Views**: Provides detailed and structured views of departments, roles, and employees in a tabular format.
 - **Efficient Data Entry**: Allows for easy addition of new departments, roles, and employees with guided prompts.
-- **Role and Manager Updates**: Enables seamless updates of employee roles and managers to reflect organizational changes.
-- **Data Filtering**: Facilitates filtering of employee data by department or manager, aiding in focused analysis and reporting.
-- **Budget Calculation**: Computes the total salary budget for selected departments, aiding in financial planning.
-- **Data Deletion**: Supports deletion of departments, roles, and employees, ensuring database maintenance and cleanup.
+- **Role Updates**: Enables seamless updates of employee roles to reflect organizational changes.
 - **User-Friendly Interface**: Offers an intuitive command-line interface (CLI) powered by Inquirer.js for effortless interaction.
 
 
@@ -113,12 +110,14 @@ GitHub Repository: https://github.com/vaughanknouse/SQL-employee-tracker
 Walkthrough Video Link: ***
 
 
-## Credits ***
-Used the following starter code and sources as tutorials and guidelines: ***
+## Credits 
+Used the following sources as tutorials and guidelines:
 
 PostgreSQL Shell Documentation: https://www.postgresql.org/docs/current/app-psql.html
 
 Node.js `pg` Package: https://www.npmjs.com/package/pg
+
+ChatGPT: https://chatgpt.com/?oai-dm=1
 
 Also utilized the Xpert Learning Assistant for some portions of my code:
 https://bootcampspot.instructure.com/courses/5293/external_tools/313

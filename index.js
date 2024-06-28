@@ -111,7 +111,7 @@ function viewEmployees() {
   );
 };
 
-// Function to add a department
+// Function to add a new department
 function addDepartment() {
   // Prompt the user for the department name
   inquirer.prompt([
@@ -166,7 +166,7 @@ async function addRole() {
     // Insert the new role into the database
     pool.query('INSERT INTO role (title, salary, department_id) VALUES ($1, $2, $3)', [roleTitle, roleSalary, roleDepartment], function (err, result) {
       if (err) {
-        console.error('Error adding a new role:', err);
+        console.error('Error adding a new role', err);
       } else {
         console.log(`Added ${answers.roleTitle} successfully to the database!`);
       }
@@ -176,8 +176,105 @@ async function addRole() {
   });
 };
 
-// Function to add an employee
-function addEmployee() {}
+// Function to add a new employee
+async function addEmployee() {
+  // Fetch all roles to provide as choices
+  const roles = await pool.query('SELECT * FROM role');
+  const roleChoices = roles.rows.map(({ id, title }) => ({
+    name: title,
+    value: id,
+  }));
+  // Fetch all employees to provide as manager choices
+  const managers = await pool.query('SELECT * FROM employee');
+  const managerChoices = managers.rows.map(({ id, first_name, last_name }) => ({
+    name: `${first_name} ${last_name}`,
+    value: id,
+  }));
+  // Add an option for no manager
+  managerChoices.unshift({
+    name: `None`,
+    value: null,
+  });
+  // Prompt the user for the employee details
+  inquirer.prompt([
+    {
+      type: 'input',
+      name: 'firstName',
+      message: 'What is the employee\'s first name?',
+    },
+    {
+      type: 'input',
+      name: 'lastName',
+      message: 'What is the employee\'s last name?',
+    },
+    {
+      type: 'list',
+      name: 'employeeRole',
+      message: 'What is the employee\'s role?',
+      choices: roleChoices,
+    },
+    {
+      type: 'list',
+      name: 'employeeManager',
+      message: 'Who is the employee\'s manager?',
+      choices: managerChoices,
+    },
+  ]).then((answers) => {
+    const { firstName, lastName, employeeRole, employeeManager } = answers;
+    // Insert the new employee into the database
+    pool.query('INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES ($1, $2, $3, $4)', [firstName, lastName, employeeRole, employeeManager], function (err, result) {
+      if (err) {
+        console.error('Error adding a new employee', err);
+      } else {
+        console.log(`Added ${answers.firstName} ${answers.lastName} successfully to the database!`);
+      }
+      // Return to the main menu
+      mainMenuPrompts();
+    });
+  });
+};
 
-// Function to update an employee role
-function updateEmployeeRole() {}
+
+// Function to update an employee's role
+async function updateEmployeeRole() {
+  // Fetch all employees to provide as choices
+  const employees = await pool.query('SELECT * FROM employee');
+  const employeeChoices = employees.rows.map(({ id, first_name, last_name }) => ({
+    name: `${first_name} ${last_name}`,
+    value: id,
+  }));
+  // Fetch all roles to provide as choices
+  const roles = await pool.query('SELECT * FROM role');
+  const roleChoices = roles.rows.map(({ id, title }) => ({
+    name: title,
+    value: id,
+  }));
+  // Prompt the user for the employee and new role details
+  inquirer.prompt([
+    {
+      type: 'list',
+      name: 'employeeToUpdate',
+      message: 'Which employee\'s role would you like to update?',
+      choices: employeeChoices,
+    },
+    {
+      type: 'list',
+      name: 'newRole',
+      message: 'Which role would you like to assign to the selected employee?',
+      choices: roleChoices,
+    },
+  ]).then((answers) => {
+    const { employeeToUpdate, newRole } = answers;
+    // Update the employee's role and manager in the database
+    pool.query('UPDATE employee SET role_id = $1 WHERE id = $2', [newRole, employeeToUpdate], function (err, result) {
+      if (err) {
+        console.error('Error updating the employee role', err);
+      } else {
+        console.log('Employee role updated successfully!');
+      }
+      // Return to the main menu
+      mainMenuPrompts();
+    });
+  });
+};
+
